@@ -1,12 +1,10 @@
-node{
-  checkout scm
-  stage('Build'){
-    echo 'Building .....'
-  }
-  stage('Test'){
-    echo 'Testing .....'
-  }
-  stage('Deploy'){
-    echo 'Deploying .....'
-  }
+pipeline {
+    agent { docker { image 'node:20.11.1-alpine3.19' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'node --version'
+            }
+        }
+    }
 }
