@@ -1,10 +1,12 @@
 pipeline {
-    agent any
+    agent {
+        docker { image node:21-slim }
+    }
     stages {
         stage('build') {
             steps {
                 echo 'Building......'
-                sh './hello.sh'
+                sh 'node --version'
             }
         }
     }
