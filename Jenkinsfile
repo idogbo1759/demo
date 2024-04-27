@@ -7,6 +7,9 @@ pipeline {
             }
         }
         stage('test') {
+            when {
+                changeset '**/*.sh'
+            }
             steps {
                 echo 'Testing..'
             }
