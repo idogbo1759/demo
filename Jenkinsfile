@@ -1,9 +1,16 @@
 pipeline {
     agent any
     stages {
-        stage('hello') {
+        stage('full-path') {
             steps {
-                echo 'Hello World!'
+                sh 'cat my-dir/output.txt'
+            }
+        }
+        stage('dir') {
+            steps {
+                dir('my-dir') {
+                   sh 'cat output.txt'
+                }
             }
         }
     }
