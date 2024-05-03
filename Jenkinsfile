@@ -10,6 +10,7 @@ pipeline {
             steps {
                dir('my-dir'){
                    sh 'cat output.txt'
+               }
             }
         }
     }
