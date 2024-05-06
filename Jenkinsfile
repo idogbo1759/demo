@@ -1,10 +1,10 @@
 pipeline {
     agent any
-    stages {
-        when{
-            branch 'main'
-        }
+    stages {      
         stage('hello') {
+            when{
+                 branch 'main'
+            }
             steps {
                echo 'Hello World'
             }
