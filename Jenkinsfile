@@ -6,7 +6,8 @@ pipeline {
                 branch 'main'
             }
             steps {
-               echo 'Hello World'
+               echo 'building..........'
+                sh './hello.sh'
             }
         }
     }
