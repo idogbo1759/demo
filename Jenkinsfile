@@ -5,6 +5,5 @@ pipeline {
             steps {
                echo 'building..........'
                 sh './hello.sh'
-
     }
 }
